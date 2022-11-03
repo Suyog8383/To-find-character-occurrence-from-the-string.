@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let name = "nagawAde";
+  let obj = {};
+  if (typeof name === "string") {
+    console.log(charOccurre(name));
+  } else {
+    console.log("enter valid string");
+  }
+
+  function charOccurre(name) {
+    let can = name.toLowerCase();
+    for (let i = 0; i < can.length; i++) {
+      if (obj.hasOwnProperty(can[i])) {
+        obj[can[i]]++;
+      } else {
+        obj[can[i]] = 1;
+      }
+    }
+    return obj;
+  }
+</script>
